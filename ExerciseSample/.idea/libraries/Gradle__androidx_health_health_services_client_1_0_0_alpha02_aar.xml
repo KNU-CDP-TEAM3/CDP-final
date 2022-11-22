@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.health:health-services-client:1.0.0-alpha02@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/02e32f0b6b8ec779dd8f1fcef477ed52/transformed/jetified-health-services-client-1.0.0-alpha02/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/02e32f0b6b8ec779dd8f1fcef477ed52/transformed/jetified-health-services-client-1.0.0-alpha02/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/02e32f0b6b8ec779dd8f1fcef477ed52/transformed/jetified-health-services-client-1.0.0-alpha02/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/096a4dd576eec5b931231f8e8788b7f1/transformed/jetified-health-services-client-1.0.0-alpha02/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/096a4dd576eec5b931231f8e8788b7f1/transformed/jetified-health-services-client-1.0.0-alpha02/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/096a4dd576eec5b931231f8e8788b7f1/transformed/jetified-health-services-client-1.0.0-alpha02/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

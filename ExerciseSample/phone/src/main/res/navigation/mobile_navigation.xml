@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.exercise.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_exerciserecord"
+        android:name="com.example.exercise.ui.exerciserecord.ExerciserecordFragment"
+        android:label="@string/menu_exerciserecord"
+        tools:layout="@layout/fragment_exerciserecord" />
+
+    <fragment
+        android:id="@+id/nav_calories"
+        android:name="com.example.exercise.ui.calories.CaloriesFragment"
+        android:label="@string/menu_calories"
+        tools:layout="@layout/fragment_calories" />
+
+</navigation>

@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff"
+    tools:context=".ui.home.HomeFragment">
+
+    <TextView
+        android:id="@+id/text_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/HeartRateTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:text="@string/init"
+        android:textSize="12sp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <TextView
+        android:id="@+id/CalorieTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:text="@string/init"
+        android:textSize="12sp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/HeartRateTextView"
+        app:layout_constraintEnd_toEndOf="parent" />
+    <TextView
+        android:id="@+id/DistanceTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:text="@string/init"
+        android:textSize="12sp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/CalorieTextView"
+        app:layout_constraintEnd_toEndOf="parent" />
+    <TextView
+        android:id="@+id/LapsTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:text="@string/init"
+        android:textSize="12sp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/DistanceTextView"
+        app:layout_constraintEnd_toEndOf="parent" />
+    <TextView
+        android:id="@+id/SpeedTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:text="@string/init"
+        android:textSize="12sp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/LapsTextView"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/home_top"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:orientation="vertical"
+                android:layout_weight="1"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:elevation="20dp"
+                android:background="@drawable/back_white"
+                android:layout_margin="10dp"
+                android:weightSum="10">
+
+                <TextView
+                    android:id="@+id/data_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient_button"
+                    android:padding="5dp"
+                    android:text="스마트워치 기록"
+                    android:textAlignment="center"
+                    android:textColor="#fff"
+                    android:textSize="20sp"/>
+
+                <LinearLayout
+                    android:id="@+id/heart_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_below="@id/data_title"
+                    android:layout_toLeftOf="@id/calories_group"
+                    android:layout_margin="10dp"
+                    android:gravity="center_horizontal">
+
+                    <ImageView
+                        android:id="@+id/heart_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_heart_40"
+                        app:tint="#FF8178" />
+                    <TextView
+                        android:id="@+id/heart_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Heart"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/calories_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_below="@id/data_title"
+                    android:layout_toLeftOf="@id/distance_group"
+                    android:layout_margin="10dp"
+                    android:gravity="center_horizontal">
+
+                    <ImageView
+                        android:id="@+id/calories_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_calories_40"
+                        app:tint="#FF9800" />
+
+                    <TextView
+                        android:id="@+id/calories_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Calories"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/distance_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_below="@id/data_title"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="10dp"
+                    android:gravity="center_horizontal">
+
+                    <ImageView
+                        android:id="@+id/distance_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_distance_40"
+                        app:tint="#FFC107" />
+                    <TextView
+                        android:id="@+id/distance_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Distance" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/laps_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_below="@id/data_title"
+                    android:layout_toRightOf="@id/distance_group"
+                    android:layout_margin="10dp"
+                    android:gravity="center_horizontal">
+
+                    <ImageView
+                        android:id="@+id/laps_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_lap_40"
+                        app:tint="#8BC34A" />
+                    <TextView
+                        android:id="@+id/laps_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Laps"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/speed_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_below="@id/data_title"
+                    android:layout_toRightOf="@id/laps_group"
+                    android:layout_margin="10dp"
+                    android:gravity="center_horizontal">
+
+                    <ImageView
+                        android:id="@+id/speed_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_speed_40"
+                        app:tint="#FF6464" />
+                    <TextView
+                        android:id="@+id/speed_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Speed"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back_white"
+                android:elevation="20dp"
+                android:layout_margin="10dp"
+                android:weightSum="10">
+
+                <TextView
+                    android:id="@+id/exe_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient_button"
+                    android:padding="5dp"
+                    android:text="운동 기록"
+                    android:textAlignment="center"
+                    android:textColor="#fff"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:id="@+id/exe1_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/exe_title"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toLeftOf="@id/exe2_group"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/exe1_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_heart_40"
+                        app:tint="#FF8178" />
+
+                    <TextView
+                        android:id="@+id/exe1_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="exe1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/exe2_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_below="@id/exe_title"
+                    android:layout_toLeftOf="@id/exe3_group"
+                    android:layout_margin="10dp"
+                    android:gravity="center_horizontal">
+
+                    <ImageView
+                        android:id="@+id/exe2_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_calories_40"
+                        app:tint="#FF9800" />
+
+                    <TextView
+                        android:id="@+id/exe2_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="exe2" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/exe3_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_below="@id/exe_title"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="10dp"
+                    android:gravity="center_horizontal">
+
+                    <ImageView
+                        android:id="@+id/exe3_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_distance_40"
+                        app:tint="#FFC107" />
+                    <TextView
+                        android:id="@+id/exe3_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="exe3" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/exe4_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_below="@id/exe_title"
+                    android:layout_toRightOf="@id/exe3_group"
+                    android:layout_margin="10dp"
+                    android:gravity="center_horizontal">
+
+                    <ImageView
+                        android:id="@+id/exe4_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_lap_40"
+                        app:tint="#8BC34A" />
+                    <TextView
+                        android:id="@+id/exe4_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="exe4"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/exe5_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_below="@id/exe_title"
+                    android:layout_toRightOf="@id/exe4_group"
+                    android:layout_margin="10dp"
+                    android:gravity="center_horizontal">
+
+                    <ImageView
+                        android:id="@+id/exe5_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_speed_40"
+                        app:tint="#FF6464" />
+                    <TextView
+                        android:id="@+id/exe5_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="exe5"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/back_white"
+                android:elevation="20dp"
+                android:weightSum="10">
+
+                <TextView
+                    android:id="@+id/diet_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient_button"
+                    android:padding="5dp"
+                    android:text="식단 기록"
+                    android:textAlignment="center"
+                    android:textColor="#fff"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/back_white"
+                android:weightSum="10">
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
