@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/iinseong/Desktop/real/Capstone-Design-Project/ExerciseSample/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-de/values-de.xml",
+            "outputFile": "/Users/iinseong/Desktop/hihi/CDP-final/ExerciseSample/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-de/values-de.xml",
             "map": [
                 {
                     "source": "/Users/iinseong/.gradle/caches/transforms-3/c9ca48e763d7bbdb1352ebd02b84d6d5/transformed/jetified-wearable-2.9.0/res/values-de/values.xml",

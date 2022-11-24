@@ -24,6 +24,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".tempActivity" />
+        <activity android:name=".HeartGraph" />
     </application>
 
 </manifest>

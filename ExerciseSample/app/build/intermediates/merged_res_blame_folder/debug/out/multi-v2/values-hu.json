@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/iinseong/Desktop/real/Capstone-Design-Project/ExerciseSample/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hu/values-hu.xml",
+            "outputFile": "/Users/iinseong/Desktop/hihi/CDP-final/ExerciseSample/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hu/values-hu.xml",
             "map": [
                 {
                     "source": "/Users/iinseong/.gradle/caches/transforms-3/40b78a3151ab798bef06f05b6af7e8ff/transformed/jetified-play-services-basement-18.0.0/res/values-hu/values.xml",
