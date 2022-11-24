@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/iinseong/Desktop/real/Capstone-Design-Project/ExerciseSample/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-w320dp-land-v13/values-w320dp-land-v13.xml",
+            "outputFile": "/Users/iinseong/Desktop/hihi/CDP-final/ExerciseSample/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-w320dp-land-v13/values-w320dp-land-v13.xml",
             "map": [
                 {
                     "source": "/Users/iinseong/.gradle/caches/transforms-3/38ffe6966bb496901e70a74f0aa64c79/transformed/material-1.5.0-alpha04/res/values-w320dp-land-v13/values-w320dp-land-v13.xml",

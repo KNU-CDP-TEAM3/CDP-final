@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/iinseong/Desktop/real/Capstone-Design-Project/ExerciseSample/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-round-v23/values-round-v23.xml",
+            "outputFile": "/Users/iinseong/Desktop/hihi/CDP-final/ExerciseSample/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-round-v23/values-round-v23.xml",
             "map": [
                 {
                     "source": "/Users/iinseong/.gradle/caches/transforms-3/f594d46ce5a851618862a07fee65a744/transformed/wear-1.2.0/res/values-round-v23/values-round-v23.xml",
@@ -21,6 +21,23 @@
                     }
                 },
                 {
+                    "source": "/Users/iinseong/Desktop/hihi/CDP-final/ExerciseSample/app/src/main/res/values-round/dimens.xml",
+                    "from": {
+                        "startLines": "5,4,3,2",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "209,159,107,57",
+                        "endColumns": "46,48,50,48",
+                        "endOffsets": "251,203,153,101"
+                    },
+                    "to": {
+                        "startLines": "5,11,12,13",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "239,652,701,752",
+                        "endColumns": "46,48,50,48",
+                        "endOffsets": "281,696,747,796"
+                    }
+                },
+                {
                     "source": "/Users/iinseong/.gradle/caches/transforms-3/c9ca48e763d7bbdb1352ebd02b84d6d5/transformed/jetified-wearable-2.9.0/res/values-round-v23/values.xml",
                     "from": {
                         "startLines": "4,5,9,10,11,12,13,14",
@@ -35,23 +52,6 @@
                         "startOffsets": "55,115,286,367,452,500,575,801",
                         "endColumns": "59,60,80,84,47,74,76,74",
                         "endOffsets": "110,171,362,447,495,570,647,871"
-                    }
-                },
-                {
-                    "source": "/Users/iinseong/Desktop/real/Capstone-Design-Project/ExerciseSample/app/src/main/res/values-round/dimens.xml",
-                    "from": {
-                        "startLines": "5,4,3,2",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "209,159,107,57",
-                        "endColumns": "46,48,50,48",
-                        "endOffsets": "251,203,153,101"
-                    },
-                    "to": {
-                        "startLines": "5,11,12,13",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "239,652,701,752",
-                        "endColumns": "46,48,50,48",
-                        "endOffsets": "281,696,747,796"
                     }
                 }
             ]

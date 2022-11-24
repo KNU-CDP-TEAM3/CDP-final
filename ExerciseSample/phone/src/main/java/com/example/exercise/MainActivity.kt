@@ -13,15 +13,12 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
-import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import com.example.exercise.databinding.ActivityMainBinding
 import com.example.exercise.databinding.ActivityMainhomeBinding
-import com.example.exercise.databinding.FragmentHomeBinding
 import com.example.exercise.ui.calories.CaloriesFragment
 import com.example.exercise.ui.exerciserecord.ExerciserecordFragment
 import com.example.exercise.ui.home.HomeFragment
@@ -95,6 +92,15 @@ class MainActivity : AppCompatActivity(),CoroutineScope by MainScope(),
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+        binding.appBarMainhome.heartRateTextView.setOnClickListener {
+            ny = Intent(this, HeartGraph::class.java)
+            startActivity(ny)
+        }
+
+
+
+
     }
 
     override fun onSupportNavigateUp(): Boolean {
@@ -296,7 +302,7 @@ class MainActivity : AppCompatActivity(),CoroutineScope by MainScope(),
     @SuppressLint("SetTextI18n")
     override fun onMessageReceived(p0: MessageEvent) {
         try {
-            var binding : FragmentHomeBinding = FragmentHomeBinding.inflate(layoutInflater)
+//            var binding : FragmentHomeBinding = FragmentHomeBinding.inflate(layoutInflater)
             val s =
                 String(p0.data, StandardCharsets.UTF_8)
             val messageEventPath: String = p0.path
@@ -319,32 +325,32 @@ class MainActivity : AppCompatActivity(),CoroutineScope by MainScope(),
                 messageEvent = p0
                 wearableNodeUri = p0.sourceNodeId
             } else if (messageEventPath.isNotEmpty() && messageEventPath == MESSAGE_ITEM_RECEIVED_PATH) {
-
                 try {
-                    binding.HeartRateTextView.visibility = View.VISIBLE
-                    binding.CalorieTextView.visibility = View.VISIBLE
-                    binding.SpeedTextView.visibility = View.VISIBLE
-                    binding.DistanceTextView.visibility = View.VISIBLE
-                    binding.LapsTextView.visibility = View.VISIBLE
-
+                    binding.appBarMainhome.heartRateTextView.visibility = View.VISIBLE
+                    binding.appBarMainhome.calorieTextView.visibility = View.VISIBLE
+                    binding.appBarMainhome.speedTextView.visibility = View.VISIBLE
+                    binding.appBarMainhome.distanceTextView.visibility = View.VISIBLE
+                    binding.appBarMainhome.lapsTextView.visibility = View.VISIBLE
+                    Log.d("sibal",s)
                     var tempS = ""
                     var Count = 0
                     for(i in 0..s.length-1 step(1)){
                         if(s[i] == 'A'){
                             if(Count == 0){
-                                binding.HeartRateTextView.text = tempS
+                                binding.appBarMainhome.heartRateTextView.text = tempS
+                                Log.d("sdf",binding.appBarMainhome.heartRateTextView.text.toString())
                             }
                             else if(Count == 1){
-                                binding.CalorieTextView.text = tempS
+                                binding.appBarMainhome.calorieTextView.text = tempS
                             }
                             else if(Count == 2){
-                                binding.DistanceTextView.text = tempS
+                                binding.appBarMainhome.distanceTextView.text = tempS
                             }
                             else if(Count == 3){
-                                binding.LapsTextView.text = tempS
+                                binding.appBarMainhome.lapsTextView.text = tempS
                             }
                             else if(Count == 4) {
-                                binding.SpeedTextView.text = tempS
+                                binding.appBarMainhome.speedTextView.text = tempS
                             }
                             tempS = ""
                             Count++
@@ -358,6 +364,7 @@ class MainActivity : AppCompatActivity(),CoroutineScope by MainScope(),
                 } catch (e: Exception) {
                     e.printStackTrace()
                 }
+
             }
         } catch (e: Exception) {
             e.printStackTrace()

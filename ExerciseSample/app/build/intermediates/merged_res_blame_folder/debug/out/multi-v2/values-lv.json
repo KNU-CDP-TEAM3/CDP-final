@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/iinseong/Desktop/real/Capstone-Design-Project/ExerciseSample/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-lv/values-lv.xml",
+            "outputFile": "/Users/iinseong/Desktop/hihi/CDP-final/ExerciseSample/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-lv/values-lv.xml",
             "map": [
                 {
                     "source": "/Users/iinseong/.gradle/caches/transforms-3/2b6ede1702833c4157eb5f3f664050cd/transformed/jetified-play-services-base-18.0.1/res/values-lv/values.xml",
