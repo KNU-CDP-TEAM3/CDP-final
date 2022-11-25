@@ -51,11 +51,10 @@ class MainActivity : AppCompatActivity(),CoroutineScope by MainScope(),
     private var messageEvent: MessageEvent? = null
     private var wearableNodeUri: String? = null
 
-    private lateinit var homeFragment: HomeFragment
-//    private lateinit var dataFragment: DataFragment
-    private lateinit var exerciserecordFragment: ExerciserecordFragment
-    private lateinit var mypageFragment: MyPageFragment
-    private lateinit var caloriesFragment: CaloriesFragment
+    private val fragmentManager = supportFragmentManager
+    private var homeFragment: HomeFragment? = null
+    private var dataFragment: HomeFragment? = null
+    private var mypageFragment: MyPageFragment? = null
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainhomeBinding
@@ -67,7 +66,7 @@ class MainActivity : AppCompatActivity(),CoroutineScope by MainScope(),
         val view = binding.root
         setContentView(view)
 
-        initNavigationBar()
+        initBottomNavigation()
 
         activityContext = this
         wearableDeviceConnected = false
@@ -113,68 +112,76 @@ class MainActivity : AppCompatActivity(),CoroutineScope by MainScope(),
             ny = Intent(this, SpeedGraph::class.java)
             startActivity(ny)
         }
+
+        val namePreferences = getSharedPreferences("name_info", Context.MODE_PRIVATE)
+        val agePreferences = getSharedPreferences("age_info", Context.MODE_PRIVATE)
+        val heightPreferences = getSharedPreferences("height_info", Context.MODE_PRIVATE)
+        val weightPreferences = getSharedPreferences("weight_info", Context.MODE_PRIVATE)
+
+        val nameInfo = namePreferences.getString("profile", "")
+        val ageInfo = agePreferences.getString("profile", "")
+        val weightInfo = weightPreferences.getString("profile", "")
+        val heightInfo = heightPreferences.getString("profile", "")
+
+        /*
+        val fragmentM = MyPageFragment()
+
+        if (nameInfo != null) {
+            fragmentM.changeName(nameInfo)
+        }
+         */
     }
 
-    fun receiveNameData(name: String) {
-        getSharedPreferences("name_info", Context.MODE_PRIVATE).edit {
-            putString("profile", name)
-            apply()
-        }
-        Log.d("MainActivity", "저장 ${name}")
-    }
-    fun receiveAgeData(age: String) {
-        getSharedPreferences("age_info", Context.MODE_PRIVATE).edit {
-            putString("profile", age)
-            apply()
-        }
-        Log.d("MainActivity", "저장 ${age}")
-    }
-    fun receiveHeightData(height: String) {
-        getSharedPreferences("height_info", Context.MODE_PRIVATE).edit {
-            putString("profile", height)
-            apply()
-        }
-        Log.d("MainActivity", "저장 ${height}")
-    }
-    fun receiveWeightData(weight: String) {
-        getSharedPreferences("weight_info", Context.MODE_PRIVATE).edit {
-            putString("profile", weight)
-            apply()
-        }
-        Log.d("MainActivity", "저장 ${weight}")
+    private fun initBottomNavigation() {
+        homeFragment = HomeFragment()
+        fragmentManager.beginTransaction().replace(R.id.nav_host_fragment_content_mainhome, homeFragment!!).commit()
+
+        binding.navView1.run{
+            setOnItemSelectedListener {
+                when(it.itemId) {
+                    R.id.navigation_home -> {
+                        if (homeFragment == null) {
+                            homeFragment = HomeFragment()
+                            fragmentManager.beginTransaction().add(R.id.nav_host_fragment_content_mainhome, homeFragment!!).commit()
+                        }
+                        if (homeFragment != null) fragmentManager.beginTransaction().show(homeFragment!!).commit()
+                        if (dataFragment != null) fragmentManager.beginTransaction().hide(dataFragment!!).commit()
+                        if (mypageFragment != null) fragmentManager.beginTransaction().hide(mypageFragment!!).commit()
+
+                        return@setOnItemSelectedListener true
+                    }
+                    R.id.navigation_data -> {
+                        if (dataFragment == null) {
+                            dataFragment = HomeFragment()
+                            fragmentManager.beginTransaction().add(R.id.nav_host_fragment_content_mainhome, dataFragment!!).commit()
+                        }
+                        if (homeFragment != null) fragmentManager.beginTransaction().hide(homeFragment!!).commit()
+                        if (dataFragment != null) fragmentManager.beginTransaction().show(dataFragment!!).commit()
+                        if (mypageFragment != null) fragmentManager.beginTransaction().hide(mypageFragment!!).commit()
+
+                        return@setOnItemSelectedListener true
+                    }
+                    R.id.navigation_mypage -> {
+                        if (mypageFragment == null) {
+                            mypageFragment = MyPageFragment()
+                            fragmentManager.beginTransaction().add(R.id.nav_host_fragment_content_mainhome, mypageFragment!!).commit()
+                        }
+                        if (homeFragment != null) fragmentManager.beginTransaction().hide(homeFragment!!).commit()
+                        if (dataFragment != null) fragmentManager.beginTransaction().hide(dataFragment!!).commit()
+                        if (mypageFragment != null) fragmentManager.beginTransaction().show(mypageFragment!!).commit()
+
+                        return@setOnItemSelectedListener true
+                    }
+                    else -> {
+                        return@setOnItemSelectedListener true
+                    }
+                }
+            }}
     }
 
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment_content_mainhome)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
-    }
-
-    fun initNavigationBar(){
-        binding.navView1.run {
-            setOnItemSelectedListener { item ->
-                when(item.itemId) {
-                    R.id.navigation_home -> {
-                        homeFragment = HomeFragment()
-                        supportFragmentManager.beginTransaction()
-                            .replace(R.id.nav_host_fragment_content_mainhome, homeFragment)
-                            .commit()
-                    }
-                    /*R.id.navigation_data -> {
-                        dataFragment = DataFragment()
-                        supportFragmentManager.beginTransaction()
-                            .replace(R.id.nav_host_fragment_content_mainhome, dataFragment)
-                            .commit()
-                    }*/
-                    R.id.navigation_mypage -> {
-                        mypageFragment = MyPageFragment()
-                        supportFragmentManager.beginTransaction()
-                            .replace(R.id.nav_host_fragment_content_mainhome, mypageFragment)
-                            .commit()
-                    }
-                }
-                true
-            }
-        }
     }
 
     @SuppressLint("SetTextI18n")
@@ -216,6 +223,35 @@ class MainActivity : AppCompatActivity(),CoroutineScope by MainScope(),
                 }
             }
         }
+    }
+
+    fun receiveNameData(name: String) {
+        getSharedPreferences("name_info", Context.MODE_PRIVATE).edit {
+            putString("profile", name)
+            apply()
+        }
+        Log.d("MainActivity", "저장 ${name}")
+    }
+    fun receiveAgeData(age: String) {
+        getSharedPreferences("age_info", Context.MODE_PRIVATE).edit {
+            putString("profile", age)
+            apply()
+        }
+        Log.d("MainActivity", "저장 ${age}")
+    }
+    fun receiveHeightData(height: String) {
+        getSharedPreferences("height_info", Context.MODE_PRIVATE).edit {
+            putString("profile", height)
+            apply()
+        }
+        Log.d("MainActivity", "저장 ${height}")
+    }
+    fun receiveWeightData(weight: String) {
+        getSharedPreferences("weight_info", Context.MODE_PRIVATE).edit {
+            putString("profile", weight)
+            apply()
+        }
+        Log.d("MainActivity", "저장 ${weight}")
     }
 
     private fun getNodes(context: Context): BooleanArray {
@@ -423,10 +459,14 @@ class MainActivity : AppCompatActivity(),CoroutineScope by MainScope(),
         return when (item.itemId) {
             R.id.action_settings -> true
             R.id.home -> {
-                homeFragment = HomeFragment()
-                supportFragmentManager.beginTransaction()
-                    .replace(R.id.nav_host_fragment_content_mainhome, homeFragment)
-                    .commit()
+                if (homeFragment == null) {
+                    homeFragment = HomeFragment()
+                    fragmentManager.beginTransaction().add(R.id.nav_host_fragment_content_mainhome, homeFragment!!).commit()
+                }
+                if (homeFragment != null) fragmentManager.beginTransaction().show(homeFragment!!).commit()
+                if (dataFragment != null) fragmentManager.beginTransaction().hide(dataFragment!!).commit()
+                if (mypageFragment != null) fragmentManager.beginTransaction().hide(mypageFragment!!).commit()
+
                 return true
             }
             else -> super.onOptionsItemSelected(item)

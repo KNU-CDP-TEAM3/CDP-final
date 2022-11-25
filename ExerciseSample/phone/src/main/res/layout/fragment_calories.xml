@@ -32,13 +32,6 @@
             android:orientation="vertical">
 
             <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                android:background="@drawable/gradient">
-
-            </RelativeLayout>
-
-            <RelativeLayout
                 android:id="@+id/exe_top"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -425,7 +418,13 @@
                     android:textColor="@color/colorPrimary"
                     android:textSize="20sp"
                     android:textStyle="bold" />
+            </RelativeLayout>
 
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="#fff"
+                android:layout_margin="10dp">
             </RelativeLayout>
         </LinearLayout>
     </ScrollView>

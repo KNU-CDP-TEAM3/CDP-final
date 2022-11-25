@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="#fff"
+    android:orientation="vertical"
     tools:context=".ui.exerciserecord.ExerciserecordFragment">
 
     <ScrollView
@@ -15,17 +16,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_weight="1">
-
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                android:layout_weight="11"
-                android:background="@drawable/gradient">
-
-            </RelativeLayout>
+            android:orientation="vertical">
 
             <RelativeLayout
                 android:id="@+id/exe_top"
@@ -61,147 +52,137 @@
             </RelativeLayout>
 
             <RelativeLayout
+                android:id="@+id/exe1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/back_white"
                 android:elevation="20dp"
-                android:layout_margin="10dp"
-                android:paddingBottom="10dp"
-                android:weightSum="10">
+                android:layout_margin="10dp">
 
-                <TextView
-                    android:id="@+id/exe_goal"
+                <EditText
+                    android:id="@+id/exe1_memo"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginBottom="10dp"
-                    android:background="@drawable/gradient_button"
-                    android:padding="3dp"
-                    android:text="오늘의 운동 목표"
-                    android:textAlignment="center"
+                    android:layout_height="100dp"
+                    android:gravity="center"
+                    android:background="@drawable/pic_jogging"
+                    android:textCursorDrawable="@null"
                     android:textColor="#fff"
-                    android:textSize="20sp" />
-
-                <LinearLayout
-                    android:id="@+id/exe_goal_first"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:orientation="vertical"
-                    android:layout_below="@id/exe_goal"
-                    android:layout_toLeftOf="@id/exe_goal_second"
-                    android:layout_centerHorizontal="true">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="first"
-                        android:textSize="25sp"/>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="70"
-                            android:textSize="40sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="/140"
-                            android:textSize="20sp"/>
-                    </LinearLayout>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/exe_goal_second"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:orientation="vertical"
-                    android:layout_below="@id/exe_goal"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginHorizontal="40dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="second"
-                        android:textSize="25sp"/>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="95"
-                            android:textSize="40sp"
-                            android:textStyle="bold"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="/150"
-                            android:textSize="20sp"/>
-                    </LinearLayout>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/exe_goal_third"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:orientation="vertical"
-                    android:layout_below="@id/exe_goal"
-                    android:layout_toRightOf="@id/exe_goal_second"
-                    android:layout_centerHorizontal="true">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="third"
-                        android:textSize="25sp"/>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="87"
-                            android:textSize="40sp"
-                            android:textStyle="bold"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="/130"
-                            android:textSize="20sp"/>
-                    </LinearLayout>
-                </LinearLayout>
+                    android:textColorHint="#fff"
+                    android:hint="운동 기록을 작성하세요." />
             </RelativeLayout>
 
             <RelativeLayout
+                android:id="@+id/exe2"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="wrap_content"
                 android:background="@drawable/back_white"
                 android:elevation="20dp"
-                android:layout_margin="10dp"
-                android:weightSum="10">
+                android:layout_margin="10dp">
+
+                <EditText
+                    android:id="@+id/exe2_memo"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:gravity="center"
+                    android:background="@drawable/pic_yoga"
+                    android:textCursorDrawable="@null"
+                    android:textColor="#fff"
+                    android:textColorHint="#fff"
+                    android:hint="운동 기록을 작성하세요."/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/exe3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back_white"
+                android:elevation="20dp"
+                android:layout_margin="10dp">
+
+                <EditText
+                    android:id="@+id/exe3_memo"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:gravity="center"
+                    android:background="@drawable/pic_surfing"
+                    android:textCursorDrawable="@null"
+                    android:textColor="#fff"
+                    android:textColorHint="#fff"
+                    android:hint="운동 기록을 작성하세요."/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/exe4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back_white"
+                android:elevation="20dp"
+                android:layout_margin="10dp">
+
+                <EditText
+                    android:id="@+id/exe4_memo"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:gravity="center"
+                    android:background="@drawable/pic_street"
+                    android:textCursorDrawable="@null"
+                    android:textColor="#fff"
+                    android:textColorHint="#fff"
+                    android:hint="운동 기록을 작성하세요."/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/exe5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back_white"
+                android:elevation="20dp"
+                android:layout_margin="10dp">
+
+                <EditText
+                    android:id="@+id/exe5_memo"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:gravity="center"
+                    android:background="@drawable/pic_board"
+                    android:textCursorDrawable="@null"
+                    android:textColor="#fff"
+                    android:textColorHint="#fff"
+                    android:hint="운동 기록을 작성하세요."/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/exe6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back_white"
+                android:elevation="20dp"
+                android:layout_margin="10dp">
+
+                <EditText
+                    android:id="@+id/exe6_memo"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:gravity="center"
+                    android:background="@drawable/pic_bike"
+                    android:textCursorDrawable="@null"
+                    android:textColor="#fff"
+                    android:textColorHint="#fff"
+                    android:hint="운동 기록을 작성하세요."/>
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="wrap_content"
                 android:background="@drawable/back_white"
-                android:layout_margin="10dp"
-                android:weightSum="10">
+                android:layout_margin="10dp">
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="#fff"
+                android:layout_margin="10dp">
             </RelativeLayout>
         </LinearLayout>
     </ScrollView>
