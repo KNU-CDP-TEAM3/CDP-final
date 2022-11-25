@@ -13,6 +13,22 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
+            android:name=".DialogActivity"
+            android:exported="false"
+            android:label="@string/title_activity_dialog"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".CalendarActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:resizeableActivity="true"
@@ -29,7 +45,7 @@
         <activity android:name=".CalorieGraph" />
         <activity android:name=".LapsGraph" />
         <activity android:name=".SpeedGraph" />
-
+        <activity android:name=".ExerciseActivity" />
     </application>
 
 </manifest>

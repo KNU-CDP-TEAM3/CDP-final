@@ -12,6 +12,7 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.edit
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -20,8 +21,9 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.exercise.databinding.ActivityMainhomeBinding
 import com.example.exercise.ui.calories.CaloriesFragment
-import com.example.exercise.ui.exerciserecord.ExerciserecordFragment
 import com.example.exercise.ui.home.HomeFragment
+import com.example.exercise.ui.mypage.MyPageFragment
+import com.example.exercise.ui.exerciserecord.ExerciserecordFragment
 import com.google.android.gms.tasks.Tasks
 import com.google.android.gms.wearable.*
 import com.google.android.material.navigation.NavigationView
@@ -52,9 +54,8 @@ class MainActivity : AppCompatActivity(),CoroutineScope by MainScope(),
     private lateinit var homeFragment: HomeFragment
 //    private lateinit var dataFragment: DataFragment
     private lateinit var exerciserecordFragment: ExerciserecordFragment
-//    private lateinit var mypageFragment: MyPageFragment
+    private lateinit var mypageFragment: MyPageFragment
     private lateinit var caloriesFragment: CaloriesFragment
-
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainhomeBinding
@@ -78,7 +79,6 @@ class MainActivity : AppCompatActivity(),CoroutineScope by MainScope(),
         }
 
         setSupportActionBar(binding.appBarMainhome.toolbar)
-
 
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
@@ -113,16 +113,41 @@ class MainActivity : AppCompatActivity(),CoroutineScope by MainScope(),
             ny = Intent(this, SpeedGraph::class.java)
             startActivity(ny)
         }
+    }
 
-
-
+    fun receiveNameData(name: String) {
+        getSharedPreferences("name_info", Context.MODE_PRIVATE).edit {
+            putString("profile", name)
+            apply()
+        }
+        Log.d("MainActivity", "저장 ${name}")
+    }
+    fun receiveAgeData(age: String) {
+        getSharedPreferences("age_info", Context.MODE_PRIVATE).edit {
+            putString("profile", age)
+            apply()
+        }
+        Log.d("MainActivity", "저장 ${age}")
+    }
+    fun receiveHeightData(height: String) {
+        getSharedPreferences("height_info", Context.MODE_PRIVATE).edit {
+            putString("profile", height)
+            apply()
+        }
+        Log.d("MainActivity", "저장 ${height}")
+    }
+    fun receiveWeightData(weight: String) {
+        getSharedPreferences("weight_info", Context.MODE_PRIVATE).edit {
+            putString("profile", weight)
+            apply()
+        }
+        Log.d("MainActivity", "저장 ${weight}")
     }
 
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment_content_mainhome)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
-
 
     fun initNavigationBar(){
         binding.navView1.run {
@@ -134,38 +159,23 @@ class MainActivity : AppCompatActivity(),CoroutineScope by MainScope(),
                             .replace(R.id.nav_host_fragment_content_mainhome, homeFragment)
                             .commit()
                     }
-                    R.id.navigation_exercise -> {
-                        exerciserecordFragment = ExerciserecordFragment()
-                        supportFragmentManager.beginTransaction()
-                            .replace(R.id.nav_host_fragment_content_mainhome, exerciserecordFragment)
-                            .commit()
-                    }
-                    R.id.navigation_diet -> {
-                        caloriesFragment = CaloriesFragment()
-                        supportFragmentManager.beginTransaction()
-                            .replace(R.id.nav_host_fragment_content_mainhome, caloriesFragment)
-                            .commit()
-                    }
                     /*R.id.navigation_data -> {
                         dataFragment = DataFragment()
                         supportFragmentManager.beginTransaction()
                             .replace(R.id.nav_host_fragment_content_mainhome, dataFragment)
                             .commit()
-
-                    }
+                    }*/
                     R.id.navigation_mypage -> {
                         mypageFragment = MyPageFragment()
                         supportFragmentManager.beginTransaction()
                             .replace(R.id.nav_host_fragment_content_mainhome, mypageFragment)
                             .commit()
-
-                    }*/
+                    }
                 }
                 true
             }
         }
     }
-
 
     @SuppressLint("SetTextI18n")
     private fun initialiseDevicePairing(tempAct: Activity) {
@@ -190,14 +200,12 @@ class MainActivity : AppCompatActivity(),CoroutineScope by MainScope(),
                             "Wearable device paired and app is open. Tap the \"Send Message to Wearable\" button to send the message to your wearable device.",
                             Toast.LENGTH_LONG
                         ).show()
-
                     } else {
                         Toast.makeText(
                             activityContext,
                             "A wearable device is paired but the wearable app on your watch isn't open. Launch the wearable app and try again.",
                             Toast.LENGTH_LONG
                         ).show()
-
                     }
                 } else {
                     Toast.makeText(
@@ -205,12 +213,10 @@ class MainActivity : AppCompatActivity(),CoroutineScope by MainScope(),
                         "No wearable device paired. Pair a wearable device to your phone using the Wear OS app and try again.",
                         Toast.LENGTH_LONG
                     ).show()
-
                 }
             }
         }
     }
-
 
     private fun getNodes(context: Context): BooleanArray {
         val nodeResults = HashSet<String>()
@@ -310,7 +316,6 @@ class MainActivity : AppCompatActivity(),CoroutineScope by MainScope(),
         return resBool
     }
 
-
     override fun onDataChanged(p0: DataEventBuffer) {
     }
 
@@ -336,7 +341,6 @@ class MainActivity : AppCompatActivity(),CoroutineScope by MainScope(),
                     TAG_MESSAGE_RECEIVED,
                     "Received acknowledgement message that app is open in wear"
                 )
-
                 messageEvent = p0
                 wearableNodeUri = p0.sourceNodeId
             } else if (messageEventPath.isNotEmpty() && messageEventPath == MESSAGE_ITEM_RECEIVED_PATH) {
@@ -373,12 +377,9 @@ class MainActivity : AppCompatActivity(),CoroutineScope by MainScope(),
                             tempS+=s[i]
                         }
                     }
-
-
                 } catch (e: Exception) {
                     e.printStackTrace()
                 }
-
             }
         } catch (e: Exception) {
             e.printStackTrace()
@@ -388,7 +389,6 @@ class MainActivity : AppCompatActivity(),CoroutineScope by MainScope(),
 
     override fun onCapabilityChanged(p0: CapabilityInfo) {
     }
-
 
     override fun onPause() {
         super.onPause()
@@ -400,7 +400,6 @@ class MainActivity : AppCompatActivity(),CoroutineScope by MainScope(),
             e.printStackTrace()
         }
     }
-
 
     override fun onResume() {
         super.onResume()
@@ -419,7 +418,6 @@ class MainActivity : AppCompatActivity(),CoroutineScope by MainScope(),
         return true
     }
 
-
     // ActionBar menu클릭 했을 때 동작
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
@@ -435,5 +433,3 @@ class MainActivity : AppCompatActivity(),CoroutineScope by MainScope(),
         }
     }
 }
-
-
