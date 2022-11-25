@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical"
+    tools:context=".ExerciseActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/exe_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gradient"
+                android:layout_marginBottom="15dp"
+                android:padding="15dp"
+                android:weightSum="10">
+
+                <TextView
+                    android:id="@+id/exercise_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginHorizontal="10dp"
+                    android:text="운동 기록"
+                    android:textStyle="bold"
+                    android:textColor="#fff"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/exercise_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/exercise_title"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="운동 기록 ui 입니다."
+                    android:textColor="#fff"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/exe1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back_white"
+                android:elevation="20dp"
+                android:layout_margin="10dp">
+
+                <EditText
+                    android:id="@+id/exe1_memo"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:gravity="center"
+                    android:background="@drawable/pic_jogging"
+                    android:textCursorDrawable="@null"
+                    android:textColor="#fff"
+                    android:textColorHint="#fff"
+                    android:hint="운동 기록을 작성하세요." />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/exe2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back_white"
+                android:elevation="20dp"
+                android:layout_margin="10dp">
+
+                <EditText
+                    android:id="@+id/exe2_memo"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:gravity="center"
+                    android:background="@drawable/pic_yoga"
+                    android:textCursorDrawable="@null"
+                    android:textColor="#fff"
+                    android:textColorHint="#fff"
+                    android:hint="운동 기록을 작성하세요."/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/exe3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back_white"
+                android:elevation="20dp"
+                android:layout_margin="10dp">
+
+                <EditText
+                    android:id="@+id/exe3_memo"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:gravity="center"
+                    android:background="@drawable/pic_surfing"
+                    android:textCursorDrawable="@null"
+                    android:textColor="#fff"
+                    android:textColorHint="#fff"
+                    android:hint="운동 기록을 작성하세요."/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/exe4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back_white"
+                android:elevation="20dp"
+                android:layout_margin="10dp">
+
+                <EditText
+                    android:id="@+id/exe4_memo"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:gravity="center"
+                    android:background="@drawable/pic_street"
+                    android:textCursorDrawable="@null"
+                    android:textColor="#fff"
+                    android:textColorHint="#fff"
+                    android:hint="운동 기록을 작성하세요."/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/exe5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back_white"
+                android:elevation="20dp"
+                android:layout_margin="10dp">
+
+                <EditText
+                    android:id="@+id/exe5_memo"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:gravity="center"
+                    android:background="@drawable/pic_board"
+                    android:textCursorDrawable="@null"
+                    android:textColor="#fff"
+                    android:textColorHint="#fff"
+                    android:hint="운동 기록을 작성하세요."/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/exe6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back_white"
+                android:elevation="20dp"
+                android:layout_margin="10dp">
+
+                <EditText
+                    android:id="@+id/exe6_memo"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:gravity="center"
+                    android:background="@drawable/pic_bike"
+                    android:textCursorDrawable="@null"
+                    android:textColor="#fff"
+                    android:textColorHint="#fff"
+                    android:hint="운동 기록을 작성하세요."/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back_white"
+                android:layout_margin="10dp">
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="#fff"
+                android:layout_margin="10dp">
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

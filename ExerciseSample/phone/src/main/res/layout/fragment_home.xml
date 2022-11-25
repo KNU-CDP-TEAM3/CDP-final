@@ -81,179 +81,29 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:paddingTop="10dp"
             android:orientation="vertical">
 
             <RelativeLayout
-                android:id="@+id/home_top"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                android:orientation="vertical"
-                android:layout_weight="1"/>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:elevation="20dp"
-                android:background="@drawable/back_white"
-                android:layout_margin="10dp"
-                android:weightSum="10">
-
-                <TextView
-                    android:id="@+id/data_title"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/gradient_button"
-                    android:padding="5dp"
-                    android:text="스마트워치 기록"
-                    android:textAlignment="center"
-                    android:textColor="#fff"
-                    android:textSize="20sp"/>
-
-                <LinearLayout
-                    android:id="@+id/heart_group"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_below="@id/data_title"
-                    android:layout_toLeftOf="@id/calories_group"
-                    android:layout_margin="10dp"
-                    android:gravity="center_horizontal">
-
-                    <ImageView
-                        android:id="@+id/heart_icon"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@null"
-                        android:padding="10dp"
-                        android:src="@drawable/ic_heart_40"
-                        app:tint="#FF8178" />
-                    <TextView
-                        android:id="@+id/heart_title"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Heart"/>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/calories_group"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_below="@id/data_title"
-                    android:layout_toLeftOf="@id/distance_group"
-                    android:layout_margin="10dp"
-                    android:gravity="center_horizontal">
-
-                    <ImageView
-                        android:id="@+id/calories_icon"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@null"
-                        android:padding="10dp"
-                        android:src="@drawable/ic_calories_40"
-                        app:tint="#FF9800" />
-
-                    <TextView
-                        android:id="@+id/calories_title"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Calories"/>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/distance_group"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_below="@id/data_title"
-                    android:layout_centerHorizontal="true"
-                    android:layout_margin="10dp"
-                    android:gravity="center_horizontal">
-
-                    <ImageView
-                        android:id="@+id/distance_icon"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@null"
-                        android:padding="10dp"
-                        android:src="@drawable/ic_distance_40"
-                        app:tint="#FFC107" />
-                    <TextView
-                        android:id="@+id/distance_title"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Distance" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/laps_group"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_below="@id/data_title"
-                    android:layout_toRightOf="@id/distance_group"
-                    android:layout_margin="10dp"
-                    android:gravity="center_horizontal">
-
-                    <ImageView
-                        android:id="@+id/laps_icon"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@null"
-                        android:padding="10dp"
-                        android:src="@drawable/ic_lap_40"
-                        app:tint="#8BC34A" />
-                    <TextView
-                        android:id="@+id/laps_title"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Laps"/>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/speed_group"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_below="@id/data_title"
-                    android:layout_toRightOf="@id/laps_group"
-                    android:layout_margin="10dp"
-                    android:gravity="center_horizontal">
-
-                    <ImageView
-                        android:id="@+id/speed_icon"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@null"
-                        android:padding="10dp"
-                        android:src="@drawable/ic_speed_40"
-                        app:tint="#FF6464" />
-                    <TextView
-                        android:id="@+id/speed_title"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Speed"/>
-                </LinearLayout>
-            </RelativeLayout>
-
-            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/back_white"
                 android:elevation="20dp"
-                android:layout_margin="10dp"
+                android:layout_margin="20dp"
                 android:weightSum="10">
 
                 <TextView
                     android:id="@+id/exe_title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="10dp"
                     android:background="@drawable/gradient_button"
-                    android:padding="5dp"
+                    android:padding="3dp"
                     android:text="운동 기록"
                     android:textAlignment="center"
                     android:textColor="#fff"
@@ -392,32 +242,232 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_margin="10dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
                 android:background="@drawable/back_white"
                 android:elevation="20dp"
+                android:paddingBottom="5dp"
                 android:weightSum="10">
 
                 <TextView
-                    android:id="@+id/diet_title"
+                    android:id="@+id/text_diet_today"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="10dp"
                     android:background="@drawable/gradient_button"
-                    android:padding="5dp"
-                    android:text="식단 기록"
+                    android:padding="3dp"
+                    android:text="오늘의 칼로리"
                     android:textAlignment="center"
                     android:textColor="#fff"
                     android:textSize="20sp" />
+
+                <LinearLayout
+                    android:id="@+id/today_breakfast"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_diet_today"
+                    android:layout_centerHorizontal="true"
+                    android:layout_toLeftOf="@id/today_lunch"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="아침"
+                        android:textSize="15sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="70"
+                            android:textSize="40sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="kcal"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/today_lunch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_diet_today"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginHorizontal="40dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="점심"
+                        android:textSize="15sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="95"
+                            android:textSize="40sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="kcal"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/today_dinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_diet_today"
+                    android:layout_centerHorizontal="true"
+                    android:layout_toRightOf="@id/today_lunch"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="저녁"
+                        android:textSize="15sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="87"
+                            android:textSize="40sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="kcal"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/today_lunch"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="총 "
+                        android:textAlignment="center"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2000"
+                        android:textColor="#7883DF"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" kcal"
+                        android:textAlignment="center"
+                        android:textSize="20sp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/button_calendar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/back_white"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:id="@+id/icon_calendar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/gradient_button"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_diet_calendar_50"
+                    app:tint="#fff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/icon_calendar"
+                    android:text="이번 달 식단 달력   >"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/button_exercise"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/back_white"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:id="@+id/icon_exercise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/gradient_button"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_diet_calendar_50"
+                    app:tint="#fff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/icon_exercise"
+                    android:text="운동 기록   >"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
             </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:background="@drawable/back_white"
-                android:weightSum="10">
-
+                android:layout_height="150dp"
+                android:background="@drawable/back_white">
             </RelativeLayout>
-
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
