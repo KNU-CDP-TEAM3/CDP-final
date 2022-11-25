@@ -25,6 +25,9 @@ public final class FragmentCaloriesBinding implements ViewBinding {
   public final Button backButton;
 
   @NonNull
+  public final TextView bpmText;
+
+  @NonNull
   public final TextView caloriesBurned;
 
   @NonNull
@@ -34,10 +37,11 @@ public final class FragmentCaloriesBinding implements ViewBinding {
   public final TextView caloriesText;
 
   private FragmentCaloriesBinding(@NonNull LinearLayout rootView, @NonNull Button backButton,
-      @NonNull TextView caloriesBurned, @NonNull ImageView caloriesIcon,
+      @NonNull TextView bpmText, @NonNull TextView caloriesBurned, @NonNull ImageView caloriesIcon,
       @NonNull TextView caloriesText) {
     this.rootView = rootView;
     this.backButton = backButton;
+    this.bpmText = bpmText;
     this.caloriesBurned = caloriesBurned;
     this.caloriesIcon = caloriesIcon;
     this.caloriesText = caloriesText;
@@ -76,6 +80,12 @@ public final class FragmentCaloriesBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.bpm_text;
+      TextView bpmText = ViewBindings.findChildViewById(rootView, id);
+      if (bpmText == null) {
+        break missingId;
+      }
+
       id = R.id.calories_burned;
       TextView caloriesBurned = ViewBindings.findChildViewById(rootView, id);
       if (caloriesBurned == null) {
@@ -94,8 +104,8 @@ public final class FragmentCaloriesBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentCaloriesBinding((LinearLayout) rootView, backButton, caloriesBurned,
-          caloriesIcon, caloriesText);
+      return new FragmentCaloriesBinding((LinearLayout) rootView, backButton, bpmText,
+          caloriesBurned, caloriesIcon, caloriesText);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

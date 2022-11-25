@@ -24,6 +24,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.text.buildSpannedString
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.health.services.client.data.AggregateDataPoint
@@ -46,13 +47,16 @@ import java.time.Duration
 import java.time.Instant
 import javax.inject.Inject
 import kotlin.math.roundToInt
+import android.text.style.RelativeSizeSpan
+import androidx.core.text.buildSpannedString
+import androidx.core.text.inSpans
 
 /**
  * Fragment showing the exercise controls and current exercise metrics.
  */
+private const val UNITS_RELATIVE_SIZE = .6f
 @AndroidEntryPoint
 class ExerciseFragment : Fragment() {
-
 
     @Inject
     lateinit var healthServicesManager: HealthServicesManager
@@ -275,7 +279,12 @@ class ExerciseFragment : Fragment() {
 
         }
         data[DataType.SPEED]?.let {
-            binding.speedText.text = formatSpeed(it.last().value.asDouble())
+            binding.speedText.text = buildSpannedString {
+                append(formatSpeed(it.last().value.asDouble()))
+                inSpans(RelativeSizeSpan(UNITS_RELATIVE_SIZE)) {
+                    append(" km/h")
+                }
+            }
             serviceIt.putExtra("speed",formatSpeed(it.last().value.asDouble()))
             activity?.startService(serviceIt)
         }
@@ -284,12 +293,22 @@ class ExerciseFragment : Fragment() {
 
     private fun updateAggregateMetrics(data: Map<DataType, AggregateDataPoint>) {
         (data[DataType.DISTANCE] as? CumulativeDataPoint)?.let {
-            binding.distanceText.text = formatDistanceKm(it.total.asDouble())
+            binding.distanceText.text = buildSpannedString {
+                append(formatDistanceKm(it.total.asDouble()))
+                inSpans(RelativeSizeSpan(UNITS_RELATIVE_SIZE)) {
+                    append("km")
+                }
+            }
             serviceIt.putExtra("distance",formatDistanceKm(it.total.asDouble()))
             activity?.startService(serviceIt)
         }
         (data[DataType.TOTAL_CALORIES] as? CumulativeDataPoint)?.let {
-            binding.caloriesText.text = formatCalories(it.total.asDouble())
+            binding.caloriesText.text = buildSpannedString {
+               append(formatCalories(it.total.asDouble()))
+                inSpans(RelativeSizeSpan(UNITS_RELATIVE_SIZE)) {
+                    append(" cal")
+                }
+            }
             serviceIt.putExtra("calories",formatCalories(it.total.asDouble()))
             activity?.startService(serviceIt)
         }

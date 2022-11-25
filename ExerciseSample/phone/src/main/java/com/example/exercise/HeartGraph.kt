@@ -25,7 +25,7 @@ import java.nio.charset.StandardCharsets
 import java.util.*
 
 
-class HeartGraph: AppCompatActivity(), CoroutineScope by MainScope(),
+class HeartGraph : AppCompatActivity(), CoroutineScope by MainScope(),
 DataClient.OnDataChangedListener,
 MessageClient.OnMessageReceivedListener,
 CapabilityClient.OnCapabilityChangedListener  {
@@ -71,12 +71,12 @@ CapabilityClient.OnCapabilityChangedListener  {
         chart = view.findViewById(binding.lineChart.id) as LineChart
         chart?.setDrawGridBackground(true);
         chart?.setBackgroundColor(Color.WHITE);
-        chart?.setGridBackgroundColor(Color.BLACK);
+        chart?.setGridBackgroundColor(Color.WHITE);
 
         chart!!.description.isEnabled = true
         val des: Description = chart!!.description
         des.setEnabled(true)
-        des.setText("Real-Time DATA")
+        des.setText("HeartRateGraph Ready")
         des.setTextSize(15f)
         des.setTextColor(Color.WHITE)
         chart!!.setTouchEnabled(false)
@@ -95,12 +95,14 @@ CapabilityClient.OnCapabilityChangedListener  {
         chart!!.xAxis.isEnabled = true
         chart!!.xAxis.setDrawGridLines(false)
 
+        chart!!.setNoDataText("")
+
         val l = chart!!.legend
         l.isEnabled = true
         l.formSize = 10f // set the size of the legend forms/shapes
 
         l.textSize = 12f
-        l.textColor = Color.WHITE
+        l.textColor = Color.BLACK
 
         val leftAxis = chart!!.axisLeft
         leftAxis.isEnabled = true
@@ -293,6 +295,7 @@ CapabilityClient.OnCapabilityChangedListener  {
                     for(i in 0..s.length-1 step(1)){
                         if(s[i] == 'A'){
                             if(Count == 0){
+                                binding.heartText.text = tempS
                                 var a = tempS.toInt()
                                 runOnUiThread { addEntry(a.toDouble()) }
                             }
@@ -386,10 +389,10 @@ CapabilityClient.OnCapabilityChangedListener  {
 
     private fun createSet(): LineDataSet {
         val set = LineDataSet(null, "Real-time Line Data")
-        set.lineWidth = 1f
+        set.lineWidth = 5f
         set.setDrawValues(false)
-        set.valueTextColor = ContextCompat.getColor(this,R.color.white)
-        set.color = ContextCompat.getColor(this,R.color.white)
+        set.valueTextColor = ContextCompat.getColor(this,R.color.colorAccent)
+        set.color = ContextCompat.getColor(this,R.color.colorAccent)
         set.mode = LineDataSet.Mode.LINEAR
         set.setDrawCircles(false)
         set.highLightColor = Color.rgb(190, 190, 190)

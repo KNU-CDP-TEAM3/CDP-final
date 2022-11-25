@@ -68,10 +68,10 @@ class Steal : WearableListenerService(),
         }
 
         var S1 = intent.getStringExtra("heartRate")
-        var S2 = intent.getStringExtra("speed")
+        var S2 = intent.getStringExtra("calories")
         var S3 = intent.getStringExtra("distance")
-        var S4 = intent.getStringExtra("calories")
-        var S5 = intent.getStringExtra("laps")
+        var S4 = intent.getStringExtra("laps")
+        var S5 = intent.getStringExtra("speed")
         var S = S1 + "A" + S2 + "A" + S3 + "A" + S4 + "A" + S5 + "A"
 
         if (S!!.isNotEmpty()) {
