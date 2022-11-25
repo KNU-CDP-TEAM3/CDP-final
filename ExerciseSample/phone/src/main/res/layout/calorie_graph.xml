@@ -24,7 +24,7 @@
             android:layout_height="161dp"
             android:textAlignment="center"
             android:layout_gravity="center"
-            android:text="sdf"
+            android:text="C"
             android:textSize="100sp"
             android:textColor="@color/purple_200">
         </TextView>

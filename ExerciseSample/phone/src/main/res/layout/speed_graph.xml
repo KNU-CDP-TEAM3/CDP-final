@@ -23,7 +23,7 @@
             android:layout_height="161dp"
             android:textAlignment="center"
             android:layout_gravity="center"
-            android:text="sdf"
+            android:text="S"
             android:textSize="100sp"
             android:textColor="@color/teal_200">
         </TextView>
