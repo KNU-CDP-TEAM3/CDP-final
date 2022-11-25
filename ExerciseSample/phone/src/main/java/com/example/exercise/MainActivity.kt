@@ -97,7 +97,22 @@ class MainActivity : AppCompatActivity(),CoroutineScope by MainScope(),
             ny = Intent(this, HeartGraph::class.java)
             startActivity(ny)
         }
-
+        binding.appBarMainhome.calorieTextView.setOnClickListener {
+            ny = Intent(this, CalorieGraph::class.java)
+            startActivity(ny)
+        }
+        binding.appBarMainhome.distanceTextView.setOnClickListener {
+            ny = Intent(this, DistanceGraph::class.java)
+            startActivity(ny)
+        }
+        binding.appBarMainhome.lapsTextView.setOnClickListener {
+            ny = Intent(this, LapsGraph::class.java)
+            startActivity(ny)
+        }
+        binding.appBarMainhome.speedTextView.setOnClickListener {
+            ny = Intent(this, SpeedGraph::class.java)
+            startActivity(ny)
+        }
 
 
 
@@ -338,7 +353,6 @@ class MainActivity : AppCompatActivity(),CoroutineScope by MainScope(),
                         if(s[i] == 'A'){
                             if(Count == 0){
                                 binding.appBarMainhome.heartRateTextView.text = tempS
-                                Log.d("sdf",binding.appBarMainhome.heartRateTextView.text.toString())
                             }
                             else if(Count == 1){
                                 binding.appBarMainhome.calorieTextView.text = tempS
@@ -355,7 +369,7 @@ class MainActivity : AppCompatActivity(),CoroutineScope by MainScope(),
                             tempS = ""
                             Count++
                         }
-                        else{
+                        else {
                             tempS+=s[i]
                         }
                     }

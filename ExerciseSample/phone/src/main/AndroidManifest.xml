@@ -25,6 +25,11 @@
         </activity>
         <activity android:name=".tempActivity" />
         <activity android:name=".HeartGraph" />
+        <activity android:name=".DistanceGraph" />
+        <activity android:name=".CalorieGraph" />
+        <activity android:name=".LapsGraph" />
+        <activity android:name=".SpeedGraph" />
+
     </application>
 
 </manifest>

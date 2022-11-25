@@ -147,7 +147,6 @@ class HeartrateFragment : Fragment() {
     private fun updateMetrics(data: Map<DataType, List<DataPoint>>) {
         data[DataType.HEART_RATE_BPM]?.let {
             binding.heartRateText.text = it.last().value.asDouble().roundToInt().toString()
-            Log.d("sdf","sdfsd")
             serviceIt.putExtra("heartRate",it.last().value.asDouble().roundToInt().toString())
             activity?.startService(serviceIt)
         }

@@ -25,6 +25,9 @@ public final class FragmentSpeedBinding implements ViewBinding {
   public final Button backButton;
 
   @NonNull
+  public final TextView bpmText;
+
+  @NonNull
   public final TextView speed;
 
   @NonNull
@@ -34,9 +37,11 @@ public final class FragmentSpeedBinding implements ViewBinding {
   public final TextView speedText;
 
   private FragmentSpeedBinding(@NonNull LinearLayout rootView, @NonNull Button backButton,
-      @NonNull TextView speed, @NonNull ImageView speedIcon, @NonNull TextView speedText) {
+      @NonNull TextView bpmText, @NonNull TextView speed, @NonNull ImageView speedIcon,
+      @NonNull TextView speedText) {
     this.rootView = rootView;
     this.backButton = backButton;
+    this.bpmText = bpmText;
     this.speed = speed;
     this.speedIcon = speedIcon;
     this.speedText = speedText;
@@ -75,6 +80,12 @@ public final class FragmentSpeedBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.bpm_text;
+      TextView bpmText = ViewBindings.findChildViewById(rootView, id);
+      if (bpmText == null) {
+        break missingId;
+      }
+
       id = R.id.speed;
       TextView speed = ViewBindings.findChildViewById(rootView, id);
       if (speed == null) {
@@ -93,8 +104,8 @@ public final class FragmentSpeedBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentSpeedBinding((LinearLayout) rootView, backButton, speed, speedIcon,
-          speedText);
+      return new FragmentSpeedBinding((LinearLayout) rootView, backButton, bpmText, speed,
+          speedIcon, speedText);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

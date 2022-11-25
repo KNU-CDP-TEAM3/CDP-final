@@ -349,13 +349,13 @@ public final class DaggerMainApplication_HiltComponents_SingletonC extends MainA
     }
 
     @Override
-    public void injectCaloriesFragment(CaloriesFragment caloriesFragment) {
-      injectCaloriesFragment2(caloriesFragment);
+    public void injectCaloriesFragment(CaloriesFragment arg0) {
+      injectCaloriesFragment2(arg0);
     }
 
     @Override
-    public void injectDistanceFragment(DistanceFragment distanceFragment) {
-      injectDistanceFragment2(distanceFragment);
+    public void injectDistanceFragment(DistanceFragment arg0) {
+      injectDistanceFragment2(arg0);
     }
 
     @Override
@@ -364,31 +364,31 @@ public final class DaggerMainApplication_HiltComponents_SingletonC extends MainA
     }
 
     @Override
-    public void injectHeartrateFragment(HeartrateFragment heartrateFragment) {
-      injectHeartrateFragment2(heartrateFragment);
+    public void injectHeartrateFragment(HeartrateFragment arg0) {
+      injectHeartrateFragment2(arg0);
     }
 
     @Override
-    public void injectLapsFragment(LapsFragment lapsFragment) {
-      injectLapsFragment2(lapsFragment);
+    public void injectLapsFragment(LapsFragment arg0) {
+      injectLapsFragment2(arg0);
     }
 
     @Override
-    public void injectNotAvailableFragment(NotAvailableFragment notAvailableFragment) {
+    public void injectNotAvailableFragment(NotAvailableFragment arg0) {
     }
 
     @Override
-    public void injectPrepareFragment(PrepareFragment prepareFragment) {
+    public void injectPrepareFragment(PrepareFragment arg0) {
     }
 
     @Override
-    public void injectSpeedFragment(SpeedFragment speedFragment) {
-      injectSpeedFragment2(speedFragment);
+    public void injectSpeedFragment(SpeedFragment arg0) {
+      injectSpeedFragment2(arg0);
     }
 
     @Override
-    public void injectStartupFragment(StartupFragment startupFragment) {
-      injectStartupFragment2(startupFragment);
+    public void injectStartupFragment(StartupFragment arg0) {
+      injectStartupFragment2(arg0);
     }
 
     @Override
@@ -479,7 +479,7 @@ public final class DaggerMainApplication_HiltComponents_SingletonC extends MainA
     }
 
     @Override
-    public void injectMainActivity(MainActivity mainActivity) {
+    public void injectMainActivity(MainActivity arg0) {
     }
 
     @Override
@@ -640,8 +640,8 @@ public final class DaggerMainApplication_HiltComponents_SingletonC extends MainA
     }
 
     @Override
-    public void injectExerciseService(ExerciseService exerciseService) {
-      injectExerciseService2(exerciseService);
+    public void injectExerciseService(ExerciseService arg0) {
+      injectExerciseService2(arg0);
     }
 
     @CanIgnoreReturnValue

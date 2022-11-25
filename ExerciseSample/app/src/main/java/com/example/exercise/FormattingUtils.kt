@@ -55,18 +55,15 @@ fun formatElapsedTime(elapsedDuration: Duration, includeSeconds: Boolean) = buil
 /** Format a distance to two decimals with a "km" suffix. */
 fun formatDistanceKm(meters: Double): String {
     var s = "%02.2f".format(meters / 1_000)
-    s += " km"
     return s
 }
 
 fun formatCalories(calories: Double) : String{
     var s = calories.roundToInt().toString()
-    s += " cal"
     return s
 }
 
 fun formatSpeed(speed: Double) : String{
     var s = "%02.2f".format((speed * 3600) / 1000)
-    s += " km/h"
     return s
 }
