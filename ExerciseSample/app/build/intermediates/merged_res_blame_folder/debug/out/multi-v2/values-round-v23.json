@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/iinseong/Desktop/hihi/CDP-final/ExerciseSample/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-round-v23/values-round-v23.xml",
+            "outputFile": "C:\\1\\221126\\CDP-final\\ExerciseSample\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-round-v23\\values-round-v23.xml",
             "map": [
                 {
-                    "source": "/Users/iinseong/.gradle/caches/transforms-3/f594d46ce5a851618862a07fee65a744/transformed/wear-1.2.0/res/values-round-v23/values-round-v23.xml",
+                    "source": "C:\\Users\\uni42\\.gradle\\caches\\transforms-3\\f594d46ce5a851618862a07fee65a744\\transformed\\wear-1.2.0\\res\\values-round-v23\\values-round-v23.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "/Users/iinseong/Desktop/hihi/CDP-final/ExerciseSample/app/src/main/res/values-round/dimens.xml",
+                    "source": "C:\\1\\221126\\CDP-final\\ExerciseSample\\app\\src\\main\\res\\values-round\\dimens.xml",
                     "from": {
                         "startLines": "5,4,3,2",
                         "startColumns": "4,4,4,4",
@@ -38,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "/Users/iinseong/.gradle/caches/transforms-3/c9ca48e763d7bbdb1352ebd02b84d6d5/transformed/jetified-wearable-2.9.0/res/values-round-v23/values.xml",
+                    "source": "C:\\Users\\uni42\\.gradle\\caches\\transforms-3\\c9ca48e763d7bbdb1352ebd02b84d6d5\\transformed\\jetified-wearable-2.9.0\\res\\values-round-v23\\values.xml",
                     "from": {
                         "startLines": "4,5,9,10,11,12,13,14",
                         "startColumns": "0,0,0,0,0,0,0,0",

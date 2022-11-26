@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/iinseong/Desktop/hihi/CDP-final/ExerciseSample/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-b+es+419/values-b+es+419.xml",
+            "outputFile": "C:\\1\\221126\\CDP-final\\ExerciseSample\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-b+es+419\\values-b+es+419.xml",
             "map": [
                 {
-                    "source": "/Users/iinseong/.gradle/caches/transforms-3/38ffe6966bb496901e70a74f0aa64c79/transformed/material-1.5.0-alpha04/res/values-b+es+419/values-b+es+419.xml",
+                    "source": "C:\\Users\\uni42\\.gradle\\caches\\transforms-3\\38ffe6966bb496901e70a74f0aa64c79\\transformed\\material-1.5.0-alpha04\\res\\values-b+es+419\\values-b+es+419.xml",
                     "from": {
                         "startLines": "2,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "/Users/iinseong/.gradle/caches/transforms-3/c9ca48e763d7bbdb1352ebd02b84d6d5/transformed/jetified-wearable-2.9.0/res/values-b+es+419/values.xml",
+                    "source": "C:\\Users\\uni42\\.gradle\\caches\\transforms-3\\c9ca48e763d7bbdb1352ebd02b84d6d5\\transformed\\jetified-wearable-2.9.0\\res\\values-b+es+419\\values.xml",
                     "from": {
                         "startLines": "4,7,10,13,16,19,22,23,24,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,61,62,63",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
