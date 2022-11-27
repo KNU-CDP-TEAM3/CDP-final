@@ -79,8 +79,8 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="imagePath" value="C:\Users\jsh\Downloads\123.png" />
-                                                <entry key="scalingPercent" value="173" />
+                                                <entry key="imagePath" value="C:\Users\jsh\Downloads\bb.png" />
+                                                <entry key="scalingPercent" value="79" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -112,7 +112,7 @@
                                   </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="outputName" value="ic_main" />
+                                      <entry key="outputName" value="ic_profile" />
                                     </map>
                                   </option>
                                 </PersistentState>

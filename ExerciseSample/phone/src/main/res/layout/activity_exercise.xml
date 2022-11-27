@@ -10,7 +10,7 @@
     tools:context=".ExerciseActivity">
 
     <TextView
-        android:id="@+id/exercise_title"
+        android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginVertical="20dp"
