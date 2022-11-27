@@ -11,17 +11,17 @@
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
 
-    <fragment
-        android:id="@+id/nav_exerciserecord"
-        android:name="com.example.exercise.ui.exerciserecord.ExerciserecordFragment"
-        android:label="@string/menu_exerciserecord"
-        tools:layout="@layout/fragment_exerciserecord" />
+    <activity
+        android:id="@+id/nav_exercise"
+        android:name="com.example.exercise.ExerciseActivity"
+        android:label="@string/menu_exercise"
+        tools:layout="@layout/activity_exercise" />
 
-    <fragment
-        android:id="@+id/nav_calories"
-        android:name="com.example.exercise.ui.calories.CaloriesFragment"
-        android:label="@string/menu_calories"
-        tools:layout="@layout/fragment_calories" />
+    <activity
+        android:id="@+id/nav_calendar"
+        android:name="com.example.exercise.CalendarActivity"
+        android:label="@string/menu_calendar"
+        tools:layout="@layout/activity_calendar" />
 
 
 

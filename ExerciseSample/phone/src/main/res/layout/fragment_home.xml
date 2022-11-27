@@ -124,7 +124,7 @@
 
                     <ImageView
                         android:id="@+id/exe1_icon"
-                        android:layout_width="wrap_content"
+                        android:layout_width="35dp"
                         android:layout_height="wrap_content"
                         android:background="@null"
                         android:padding="10dp"

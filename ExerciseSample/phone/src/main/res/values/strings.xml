@@ -19,8 +19,8 @@
     <string name="action_settings">Settings</string>
 
     <string name="menu_home">Home</string>
-    <string name="menu_exerciserecord">ExerciseRecord</string>
-    <string name="menu_calories">Calories</string>
+    <string name="menu_exercise">Exercise</string>
+    <string name="menu_calendar">Calendar</string>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
 

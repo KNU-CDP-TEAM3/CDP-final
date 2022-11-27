@@ -86,7 +86,7 @@ class MainActivity : AppCompatActivity(),CoroutineScope by MainScope(),
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_home, R.id.nav_exerciserecord, R.id.nav_calories
+                R.id.nav_home, R.id.nav_exercise, R.id.nav_calendar
         ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
