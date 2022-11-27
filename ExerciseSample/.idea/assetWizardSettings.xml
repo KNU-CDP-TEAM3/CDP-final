@@ -318,8 +318,9 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="outputName" value="ic_food_30" />
-                            <entry key="sourceFile" value="C:\Users\jsh\Downloads\undraw_fitness_stats_sht6.svg" />
+                            <entry key="assetSourceType" value="FILE" />
+                            <entry key="outputName" value="info_644" />
+                            <entry key="sourceFile" value="C:\Users\jsh\Downloads\undraw_online_information_re_erks.svg" />
                           </map>
                         </option>
                       </PersistentState>
