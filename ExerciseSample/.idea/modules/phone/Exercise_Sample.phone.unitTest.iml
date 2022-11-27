@@ -30,6 +30,7 @@
           <stringArguments>
             <stringArg name="classpath">
               <args>
+                <arg>$MODULE_DIR$/../../../phone/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/1cc46e96304060a7e78cb86ae6fdfc0f/transformed/jetified-viewbinding-7.0.2-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/67b70e413e1fccb62f50ab2641e079b6/transformed/navigation-fragment-ktx-2.5.3-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/434a0690d39b95227bf5cd0fdb46b109/transformed/navigation-fragment-2.5.3-api.jar</arg>

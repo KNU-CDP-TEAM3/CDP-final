@@ -20,10 +20,9 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.exercise.databinding.ActivityMainhomeBinding
-import com.example.exercise.ui.calories.CaloriesFragment
 import com.example.exercise.ui.home.HomeFragment
+import com.example.exercise.ui.info.InformationFragment
 import com.example.exercise.ui.mypage.MyPageFragment
-import com.example.exercise.ui.exerciserecord.ExerciserecordFragment
 import com.google.android.gms.tasks.Tasks
 import com.google.android.gms.wearable.*
 import com.google.android.material.navigation.NavigationView
@@ -53,7 +52,7 @@ class MainActivity : AppCompatActivity(),CoroutineScope by MainScope(),
 
     private val fragmentManager = supportFragmentManager
     private var homeFragment: HomeFragment? = null
-    private var dataFragment: HomeFragment? = null
+    private var infoFragment: InformationFragment? = null
     private var mypageFragment: MyPageFragment? = null
 
     private lateinit var appBarConfiguration: AppBarConfiguration
@@ -145,18 +144,18 @@ class MainActivity : AppCompatActivity(),CoroutineScope by MainScope(),
                             fragmentManager.beginTransaction().add(R.id.nav_host_fragment_content_mainhome, homeFragment!!).commit()
                         }
                         if (homeFragment != null) fragmentManager.beginTransaction().show(homeFragment!!).commit()
-                        if (dataFragment != null) fragmentManager.beginTransaction().hide(dataFragment!!).commit()
+                        if (infoFragment != null) fragmentManager.beginTransaction().hide(infoFragment!!).commit()
                         if (mypageFragment != null) fragmentManager.beginTransaction().hide(mypageFragment!!).commit()
 
                         return@setOnItemSelectedListener true
                     }
-                    R.id.navigation_data -> {
-                        if (dataFragment == null) {
-                            dataFragment = HomeFragment()
-                            fragmentManager.beginTransaction().add(R.id.nav_host_fragment_content_mainhome, dataFragment!!).commit()
+                    R.id.navigation_info -> {
+                        if (infoFragment == null) {
+                            infoFragment = InformationFragment()
+                            fragmentManager.beginTransaction().add(R.id.nav_host_fragment_content_mainhome, infoFragment!!).commit()
                         }
                         if (homeFragment != null) fragmentManager.beginTransaction().hide(homeFragment!!).commit()
-                        if (dataFragment != null) fragmentManager.beginTransaction().show(dataFragment!!).commit()
+                        if (infoFragment != null) fragmentManager.beginTransaction().show(infoFragment!!).commit()
                         if (mypageFragment != null) fragmentManager.beginTransaction().hide(mypageFragment!!).commit()
 
                         return@setOnItemSelectedListener true
@@ -167,7 +166,7 @@ class MainActivity : AppCompatActivity(),CoroutineScope by MainScope(),
                             fragmentManager.beginTransaction().add(R.id.nav_host_fragment_content_mainhome, mypageFragment!!).commit()
                         }
                         if (homeFragment != null) fragmentManager.beginTransaction().hide(homeFragment!!).commit()
-                        if (dataFragment != null) fragmentManager.beginTransaction().hide(dataFragment!!).commit()
+                        if (infoFragment != null) fragmentManager.beginTransaction().hide(infoFragment!!).commit()
                         if (mypageFragment != null) fragmentManager.beginTransaction().show(mypageFragment!!).commit()
 
                         return@setOnItemSelectedListener true
@@ -464,7 +463,7 @@ class MainActivity : AppCompatActivity(),CoroutineScope by MainScope(),
                     fragmentManager.beginTransaction().add(R.id.nav_host_fragment_content_mainhome, homeFragment!!).commit()
                 }
                 if (homeFragment != null) fragmentManager.beginTransaction().show(homeFragment!!).commit()
-                if (dataFragment != null) fragmentManager.beginTransaction().hide(dataFragment!!).commit()
+                if (infoFragment != null) fragmentManager.beginTransaction().hide(infoFragment!!).commit()
                 if (mypageFragment != null) fragmentManager.beginTransaction().hide(mypageFragment!!).commit()
 
                 return true
