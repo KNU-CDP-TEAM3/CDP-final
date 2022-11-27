@@ -11,6 +11,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.exercise.ExerciseActivity
 import com.example.exercise.CalendarActivity
 import com.example.exercise.databinding.FragmentHomeBinding
+import com.example.exercise.databinding.ActivityCalendarBinding
 import com.example.exercise.R
 import android.util.Log
 import kotlin.math.log

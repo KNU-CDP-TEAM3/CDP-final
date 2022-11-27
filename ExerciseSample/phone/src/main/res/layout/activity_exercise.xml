@@ -157,13 +157,6 @@
                 android:background="@drawable/back_white"
                 android:layout_margin="10dp">
             </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:background="#fff"
-                android:layout_margin="10dp">
-            </RelativeLayout>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

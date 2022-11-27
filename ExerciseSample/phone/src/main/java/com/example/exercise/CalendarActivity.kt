@@ -1,6 +1,5 @@
 package com.example.exercise
 
-
 import android.annotation.SuppressLint
 import java.io.FileInputStream
 import java.io.FileOutputStream
@@ -13,7 +12,6 @@ import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.exercise.R
-
 
 class CalendarActivity : AppCompatActivity() {
     var userID: String = "userID"
@@ -58,7 +56,6 @@ class CalendarActivity : AppCompatActivity() {
     lateinit var dinnerBtn: Button
     lateinit var calories: TextView
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_calendar)
@@ -85,7 +82,6 @@ class CalendarActivity : AppCompatActivity() {
         breakfastBtn=findViewById(R.id.breakfastBtn)
         lunchBtn=findViewById(R.id.lunchBtn)
         dinnerBtn=findViewById(R.id.dinnerBtn)
-
 
         title=findViewById(R.id.title)
         contextEditTextBreakfast=findViewById(R.id.contextEditTextBreakfast)
@@ -158,8 +154,6 @@ class CalendarActivity : AppCompatActivity() {
                 contextEditTextBreakfast.setText("")
                 contextEditTextBreakfastCalories.setText("")
                 checkDay(year, month, dayOfMonth, userID)
-
-
             }
             lunchBtn.setOnClickListener {
                 diaryTextView.visibility = View.VISIBLE
@@ -192,7 +186,6 @@ class CalendarActivity : AppCompatActivity() {
                 contextEditTextLunchCalories.setText("")
                 checkDay2(year, month, dayOfMonth, userID)
             }
-
             dinnerBtn.setOnClickListener {
                 diaryTextView.visibility = View.VISIBLE
                 saveBtn2.visibility = View.INVISIBLE
@@ -224,16 +217,7 @@ class CalendarActivity : AppCompatActivity() {
                 contextEditTextDinnerCalories.setText("")
                 checkDay3(year, month, dayOfMonth, userID)
             }
-
         }
-
-
-
-
-
-
-
-
         saveBtn.setOnClickListener {
             saveDiary(fname,fnameC)
             contextEditTextBreakfast.visibility = View.INVISIBLE
@@ -265,11 +249,7 @@ class CalendarActivity : AppCompatActivity() {
             breakfastBtn.visibility = View.VISIBLE
             lunchBtn.visibility = View.VISIBLE
             dinnerBtn.visibility = View.VISIBLE
-
-
-
         }
-
         saveBtn2.setOnClickListener {
             saveDiary2(fname2,fnameC2)
             contextEditTextBreakfast.visibility = View.INVISIBLE
@@ -301,7 +281,6 @@ class CalendarActivity : AppCompatActivity() {
             breakfastBtn.visibility = View.VISIBLE
             lunchBtn.visibility = View.VISIBLE
             dinnerBtn.visibility = View.VISIBLE
-
         }
         saveBtn3.setOnClickListener {
             saveDiary3(fname3,fnameC3)
@@ -334,12 +313,8 @@ class CalendarActivity : AppCompatActivity() {
             breakfastBtn.visibility = View.VISIBLE
             lunchBtn.visibility = View.VISIBLE
             dinnerBtn.visibility = View.VISIBLE
-
         }
-
-
     }
-
 
     // 달력 내용 조회, 수정
     fun checkDay(cYear: Int, cMonth: Int, cDay: Int, userID: String) {
@@ -459,7 +434,6 @@ class CalendarActivity : AppCompatActivity() {
                 lunchBtn.visibility = View.VISIBLE
                 dinnerBtn.visibility = View.VISIBLE
             }
-
         } catch (e: Exception) {
             e.printStackTrace()
         }
@@ -582,7 +556,6 @@ class CalendarActivity : AppCompatActivity() {
                 lunchBtn.visibility = View.VISIBLE
                 dinnerBtn.visibility = View.VISIBLE
             }
-
         } catch (e: Exception) {
             e.printStackTrace()
         }
@@ -705,12 +678,10 @@ class CalendarActivity : AppCompatActivity() {
                 lunchBtn.visibility = View.VISIBLE
                 dinnerBtn.visibility = View.VISIBLE
             }
-
         } catch (e: Exception) {
             e.printStackTrace()
         }
     }
-
 
     // 달력 내용 제거
     @SuppressLint("WrongConstant")
@@ -728,7 +699,6 @@ class CalendarActivity : AppCompatActivity() {
             fileOutputStreamC.close()
             diaryContent.text=content
             diaryContentCalories.text=contentC
-
         } catch (e: java.lang.Exception) {
             e.printStackTrace()
         }
@@ -748,7 +718,6 @@ class CalendarActivity : AppCompatActivity() {
             fileOutputStreamC.close()
             diaryContent2.text=content
             diaryContentCalories2.text=contentC
-
         } catch (e: java.lang.Exception) {
             e.printStackTrace()
         }
@@ -768,15 +737,10 @@ class CalendarActivity : AppCompatActivity() {
             fileOutputStreamC.close()
             diaryContent3.text=content
             diaryContentCalories3.text=contentC
-
         } catch (e: java.lang.Exception) {
             e.printStackTrace()
         }
     }
-
-
-
-
 
     // 달력 내용 추가
     @SuppressLint("WrongConstant")
@@ -814,6 +778,7 @@ class CalendarActivity : AppCompatActivity() {
             e.printStackTrace()
         }
     }
+
     @SuppressLint("WrongConstant")
     fun saveDiary3(readDay: String?,readDay2: String?) {
         var fileOutputStream: FileOutputStream
