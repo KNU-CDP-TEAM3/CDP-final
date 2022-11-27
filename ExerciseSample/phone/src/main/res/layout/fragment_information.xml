@@ -16,14 +16,13 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="10dp"
+            android:paddingTop="20dp"
             android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:paddingVertical="20dp">
+                android:orientation="vertical">
 
                 <RelativeLayout
                     android:id="@+id/button_exercise"
@@ -104,9 +103,16 @@
                 </RelativeLayout>
             </LinearLayout>
 
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="36dp"
+                android:src="@drawable/info_644" />
+
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="150dp">
+                android:layout_height="100dp"
+                android:background="@drawable/back_white">
             </RelativeLayout>
         </LinearLayout>
     </ScrollView>
