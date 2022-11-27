@@ -19,8 +19,8 @@
     <string name="action_settings">Settings</string>
 
     <string name="menu_home">Home</string>
-    <string name="menu_exerciserecord">ExerciseRecord</string>
-    <string name="menu_calories">Calories</string>
+    <string name="menu_exercise">Exercise</string>
+    <string name="menu_calendar">Diet Calendar</string>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
@@ -32,5 +32,8 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
+    <string name="title_activity_info_exercise">InfoExerciseActivity</string>
+    <string name="title_activity_info_diet">InfoDietActivity</string>
+    <string name="title_activity_test">TestActivity</string>
 
 </resources>

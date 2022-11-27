@@ -9,12 +9,12 @@
             android:icon="@android:drawable/ic_menu_today"
             android:title="@string/menu_home" />
         <item
-            android:id="@+id/nav_exerciserecord"
+            android:id="@+id/nav_exercise"
             android:icon="@android:drawable/ic_menu_today"
-            android:title="@string/menu_exerciserecord" />
+            android:title="@string/menu_exercise" />
         <item
-            android:id="@+id/nav_calories"
+            android:id="@+id/nav_calendar"
             android:icon="@android:drawable/ic_menu_today"
-            android:title="@string/menu_calories" />
+            android:title="@string/menu_calendar" />
     </group>
 </menu>

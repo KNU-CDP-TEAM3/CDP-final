@@ -112,8 +112,12 @@ CapabilityClient.OnCapabilityChangedListener  {
         rightAxis.isEnabled = false
 
         chart!!.invalidate()
-
-
+/*
+        binding.calorieTextView.setOnClickListener {
+            ny = Intent(this, CalorieGraph::class.java)
+            startActivity(ny)
+        }
+ */
     }
 
     @SuppressLint("SetTextI18n")

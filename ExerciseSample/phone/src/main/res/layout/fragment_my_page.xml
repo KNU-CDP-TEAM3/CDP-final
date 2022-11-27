@@ -41,21 +41,11 @@
                         android:src="@drawable/ic_person_100"
                         app:tint="#888" />
 
-                    <TextView
-                        android:id="@+id/btn_file_img"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/img_load"
-                        android:layout_centerHorizontal="true"
-                        android:text="edit photo"
-                        android:textSize="10dp"
-                        android:textColor="#888"/>
-
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginTop="20dp"
-                        android:layout_below="@id/btn_file_img"
+                        android:layout_below="@id/img_load"
                         android:orientation="vertical" >
 
                         <LinearLayout
