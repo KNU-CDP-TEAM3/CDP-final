@@ -43,20 +43,33 @@
         <entry key="phone/src/main/res/drawable/ic_outline_person_30.xml" value="0.148" />
         <entry key="phone/src/main/res/drawable/ic_speed_40.xml" value="0.148" />
         <entry key="phone/src/main/res/drawable/side_nav_bar.xml" value="0.148" />
+        <entry key="phone/src/main/res/layout/activity_calendar.xml" value="0.30520833333333336" />
+        <entry key="phone/src/main/res/layout/activity_exercise.xml" value="0.30520833333333336" />
+        <entry key="phone/src/main/res/layout/activity_info_diet.xml" value="0.30520833333333336" />
         <entry key="phone/src/main/res/layout/activity_main.xml" value="0.23026315789473684" />
         <entry key="phone/src/main/res/layout/activity_mainhome.xml" value="0.2127659574468085" />
         <entry key="phone/src/main/res/layout/app_bar_mainhome.xml" value="0.2127659574468085" />
+        <entry key="phone/src/main/res/layout/calorie_graph.xml" value="0.30520833333333336" />
         <entry key="phone/src/main/res/layout/content_mainhome.xml" value="0.2127659574468085" />
+        <entry key="phone/src/main/res/layout/dialog_layout.xml" value="0.30520833333333336" />
+        <entry key="phone/src/main/res/layout/distance_graph.xml" value="0.30520833333333336" />
         <entry key="phone/src/main/res/layout/fragment_calendar.xml" value="0.14739583333333334" />
         <entry key="phone/src/main/res/layout/fragment_calories.xml" value="0.14739583333333334" />
         <entry key="phone/src/main/res/layout/fragment_data.xml" value="0.30416666666666664" />
         <entry key="phone/src/main/res/layout/fragment_diet.xml" value="0.30520833333333336" />
         <entry key="phone/src/main/res/layout/fragment_exerciserecord.xml" value="0.14739583333333334" />
+        <entry key="phone/src/main/res/layout/fragment_first.xml" value="0.30520833333333336" />
+        <entry key="phone/src/main/res/layout/fragment_first2.xml" value="0.30520833333333336" />
         <entry key="phone/src/main/res/layout/fragment_gallery.xml" value="0.30520833333333336" />
         <entry key="phone/src/main/res/layout/fragment_home.xml" value="0.32684824902723736" />
+        <entry key="phone/src/main/res/layout/fragment_information.xml" value="0.30520833333333336" />
+        <entry key="phone/src/main/res/layout/fragment_my_page.xml" value="0.30520833333333336" />
+        <entry key="phone/src/main/res/layout/fragment_second.xml" value="0.30520833333333336" />
+        <entry key="phone/src/main/res/layout/fragment_second2.xml" value="0.30520833333333336" />
         <entry key="phone/src/main/res/layout/fragment_slideshow.xml" value="0.30520833333333336" />
         <entry key="phone/src/main/res/layout/nav_header_mainhome.xml" value="0.1" />
         <entry key="phone/src/main/res/layout/page.xml" value="0.30416666666666664" />
+        <entry key="phone/src/main/res/layout/speed_graph.xml" value="0.30520833333333336" />
         <entry key="phone/src/main/res/layout/temp_layout.xml" value="0.30520833333333336" />
         <entry key="phone/src/main/res/menu/activity_main_drawer.xml" value="0.30520833333333336" />
         <entry key="phone/src/main/res/menu/mainhome.xml" value="0.30520833333333336" />
