@@ -138,26 +138,14 @@ CapabilityClient.OnCapabilityChangedListener  {
                 if (getNodesResBool!![0]) {
                     //if message Acknowlegement Received
                     if (getNodesResBool[1]) {
-                        Toast.makeText(
-                            activityContext,
-                            "Wearable device paired and app is open. Tap the \"Send Message to Wearable\" button to send the message to your wearable device.",
-                            Toast.LENGTH_LONG
-                        ).show()
+
 
                     } else {
-                        Toast.makeText(
-                            activityContext,
-                            "A wearable device is paired but the wearable app on your watch isn't open. Launch the wearable app and try again.",
-                            Toast.LENGTH_LONG
-                        ).show()
+
 
                     }
                 } else {
-                    Toast.makeText(
-                        activityContext,
-                        "No wearable device paired. Pair a wearable device to your phone using the Wear OS app and try again.",
-                        Toast.LENGTH_LONG
-                    ).show()
+
 
                 }
             }
