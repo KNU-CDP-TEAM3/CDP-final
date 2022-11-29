@@ -139,6 +139,7 @@ class MainActivity : AppCompatActivity(),CoroutineScope by MainScope(),
             setOnItemSelectedListener {
                 when(it.itemId) {
                     R.id.navigation_home -> {
+                        getSupportActionBar()?.setTitle("Home")
                         if (homeFragment == null) {
                             homeFragment = HomeFragment()
                             fragmentManager.beginTransaction().add(R.id.nav_host_fragment_content_mainhome, homeFragment!!).commit()
@@ -150,6 +151,7 @@ class MainActivity : AppCompatActivity(),CoroutineScope by MainScope(),
                         return@setOnItemSelectedListener true
                     }
                     R.id.navigation_info -> {
+                        getSupportActionBar()?.setTitle("Information")
                         if (infoFragment == null) {
                             infoFragment = InformationFragment()
                             fragmentManager.beginTransaction().add(R.id.nav_host_fragment_content_mainhome, infoFragment!!).commit()
@@ -161,6 +163,7 @@ class MainActivity : AppCompatActivity(),CoroutineScope by MainScope(),
                         return@setOnItemSelectedListener true
                     }
                     R.id.navigation_mypage -> {
+                        getSupportActionBar()?.setTitle("MyPage")
                         if (mypageFragment == null) {
                             mypageFragment = MyPageFragment()
                             fragmentManager.beginTransaction().add(R.id.nav_host_fragment_content_mainhome, mypageFragment!!).commit()
