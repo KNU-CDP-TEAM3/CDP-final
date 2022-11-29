@@ -49,6 +49,8 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
                 startActivity(intent)
             }
         }
+
+
     }
 
     override fun onDestroyView() {

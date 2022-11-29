@@ -25,6 +25,52 @@
                 android:paddingVertical="20dp">
 
                 <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginHorizontal="35dp"
+                    android:paddingHorizontal="20dp"
+                    android:background="@drawable/back_white">
+
+                    <TextView
+                        android:id="@+id/Hello_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="0dp"
+                        android:text="안녕하세요!"
+                        android:textAlignment="center"
+                        android:textSize="40sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:layout_marginHorizontal="35dp"
+                    android:paddingHorizontal="20dp"
+                    android:background="@drawable/back_white">
+
+                    <TextView
+                        android:id="@+id/e"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="10dp"
+
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:text="오늘 운동도 힘내요!"
+                        android:textAlignment="center"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
                     android:id="@+id/button_exercise"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
